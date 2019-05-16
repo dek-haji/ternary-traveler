@@ -18,28 +18,12 @@
   ],
   "interests": [
     {
-      "name": "fffff",
-      "description": "gggg",
-      "cost": "hhh",
-      "review": "hhhh",
+      "name": "sssaaasadfsdf",
+      "description": "sadfsdfds",
+      "cost": "sdfasdf",
+      "review": "sdfasdf",
       "placeId": 1,
-      "id": 3
-    },
-    {
-      "name": "yuty",
-      "description": "tyut",
-      "cost": "uytu",
-      "review": "tuyu",
-      "placeId": 1,
-      "id": 4
-    },
-    {
-      "name": "iyui",
-      "description": "iyuii",
-      "cost": "iyui",
-      "review": "yuiy",
-      "placeId": 1,
-      "id": 5
+      "id": 2
     }
   ]
 }

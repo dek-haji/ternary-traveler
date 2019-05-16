@@ -48,8 +48,8 @@ const domBuileder = {
             let interestName = document.querySelector(".username__Input").value
             let descInput = document.querySelector(".description").value
             let costInput = document.querySelector(".cost").value
-            let locationInput = document.querySelector("#scroll").value
             let reviewInput = document.querySelector(".review").value
+            let locationInput = document.querySelector("#scroll").value
             console.log(interestName, descInput, costInput, locationInput)
             const interestObj = {
                 "name": interestName,
@@ -80,17 +80,20 @@ const domBuileder = {
                     name.innerText = singleInterest.name;
                     card.appendChild(name)
 
-                    const description1 = document.createElement("h3")
+                    const description1 = document.createElement("p")
                     description1.innerText = singleInterest.description
                     card.appendChild(description1)
 
-                    const cost = document.createElement("h4")
+                    const cost = document.createElement("p")
                     cost.innerText = singleInterest.cost
                     card.appendChild(cost)
 
-                    let review = document.createElement("h5")
+                    let review = document.createElement("p")
                     review.innerText = singleInterest.review
                     card.appendChild(review)
+                    // let place = document.createElement("p")
+                    // review.innerText = singleInterest.
+                    // card.appendChild(review)
 
                     let deletBtn = document.createElement("button")
                     deletBtn.innerText = "DELETE";
@@ -146,6 +149,7 @@ const domBuileder = {
                                 .then(results => {
                                     console.log(results)
                                     event.eventsReset()
+                                    event.clearDOM()
                                 })
                         })
                         editOptions.appendChild(save)
