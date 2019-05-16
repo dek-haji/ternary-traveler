@@ -1,7 +1,12 @@
 import domBuileder from "./domBuilder";
-
-function eventsReset(){
+const event = {
+eventsReset(){
     domBuileder.createEventForm()
      domBuileder.createOutput()
-}
-export default eventsReset
+},
+clearDOM() {
+    //Clear output divs
+    let output = document.querySelector(".output")
+    output.innerHTML = ""
+}}
+export default event

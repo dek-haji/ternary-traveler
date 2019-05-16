@@ -1,5 +1,5 @@
 import APIManager from "./dbCalls"
-import eventsReset from "./events"
+import event from "./events"
 let interestURL = "http://localhost:8088/interests"
 let placeURL = "http://localhost:8088/places"
 
@@ -61,7 +61,7 @@ const domBuileder = {
             APIManager.savePlace(interestURL, interestObj)
                 .then(after => {
                     this.createOutput()
-                    this.createEventForm()
+                    event.clearDOM()
                 })
         })
     },
@@ -130,7 +130,7 @@ const domBuileder = {
                         let editOptions = document.createElement("div")
                         editOptions.className = "edit-options"
                         let save = document.createElement("button")
-                        save.textContent = "Save"
+                        save.textContent = "UPDATE"
                         save.classList.add("btn-outline-info")
                         save.addEventListener("click", function (e) {
                             //console.log(editInput)
@@ -145,7 +145,7 @@ const domBuileder = {
                             APIManager.editPatch(interestURL, ID, obj)
                                 .then(results => {
                                     console.log(results)
-                                    eventsReset()
+                                    event.eventsReset()
                                 })
                         })
                         editOptions.appendChild(save)
