@@ -1,3 +1,5 @@
+![alt text](public/pic.png)
+
 # Browserify Starter Files
 
 Use this repository for when you want to start a new modular JavaScript application that gets compiled by Browserify. Create JavaScript modules in the `src/scripts` directory.

@@ -14,16 +14,21 @@
       "id": 3,
       "name": "France",
       "visa_required": false
+    },
+    {
+      "id": 4,
+      "name": "Malaysia",
+      "visa_required": false
     }
   ],
   "interests": [
     {
-      "name": "sssaaasadfsdf",
-      "description": "sadfsdfds",
-      "cost": "sdfasdf",
-      "review": "sdfasdf",
-      "placeId": 1,
-      "id": 2
+      "name": "hellow",
+      "description": "world",
+      "cost": "$123",
+      "review": "it was not that bad",
+      "placeId": 4,
+      "id": 1
     }
   ]
 }

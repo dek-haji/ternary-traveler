@@ -12,6 +12,7 @@ const domBuileder = {
                 console.log(parsedPlaces)
 
 
+
                 travel.innerHTML = `<div
             <form class="auth hidden">
             <fieldset>
