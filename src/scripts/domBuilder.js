@@ -62,7 +62,6 @@ const domBuileder = {
             APIManager.savePlace(interestURL, interestObj)
                 .then(after => {
                     this.createOutput()
-                    event.clearDOM()
                     event.clearInput()
                 })
         })
