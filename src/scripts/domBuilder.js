@@ -25,7 +25,7 @@ const domBuileder = {
               </fieldset>
               <fieldset>
               Cost:
-              <input class="cost" type="text" name="cost"> </br>
+              <input class="cost" type="number" name="cost"> </br>
               </fieldset>
               <fieldset>
               Review:
@@ -63,6 +63,7 @@ const domBuileder = {
                 .then(after => {
                     this.createOutput()
                     event.clearDOM()
+                    event.clearInput()
                 })
         })
     },
@@ -101,6 +102,8 @@ const domBuileder = {
                     card.appendChild(deletBtn)
 
                     deletBtn.addEventListener("click", () => {
+                        confirm("you sure about it PALL?")
+                        window.confirm()
                         APIManager.deletePlace(interestURL, ID)
                         let parent = card.parentNode
                         parent.removeChild(card)

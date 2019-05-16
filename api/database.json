@@ -21,14 +21,5 @@
       "visa_required": false
     }
   ],
-  "interests": [
-    {
-      "name": "hellow",
-      "description": "world",
-      "cost": "$123",
-      "review": "it was not that bad",
-      "placeId": 4,
-      "id": 1
-    }
-  ]
+  "interests": []
 }
