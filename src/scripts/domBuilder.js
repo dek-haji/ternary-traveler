@@ -1,4 +1,5 @@
 import APIManager from "./dbCalls"
+import eventsReset from "./events"
 let interestURL = "http://localhost:8088/interests"
 let placeURL = "http://localhost:8088/places"
 
@@ -12,7 +13,7 @@ const domBuileder = {
 
 
                 travel.innerHTML = `<div
-            <section class="auth hidden">
+            <form class="auth hidden">
             <fieldset>
               Name:
               <input class="username__Input" type="text" name="nameIntrest"> </br>
@@ -29,7 +30,6 @@ const domBuileder = {
               Review:
               <input class="review" type="text" name="review"> </br>
               </fieldset>
-              <section class="location">
               <fieldset>
                   <label for="location"> Place</label>
                   <select id = "scroll">
@@ -38,8 +38,8 @@ const domBuileder = {
                       <option value = ${parsedPlaces[2].id}>${parsedPlaces[2].name}</option>
                   </select> </br>
                   <button id ="submit"> Safe </button>
-          </section>
-           </div>`
+                  </form>
+                  </div>`
                 this.addListener()
             })
     },
@@ -59,6 +59,10 @@ const domBuileder = {
                 "placeId": parseInt(locationInput)
             }
             APIManager.savePlace(interestURL, interestObj)
+                .then(after => {
+                    this.createOutput()
+                    this.createEventForm()
+                })
         })
     },
     createOutput() {
@@ -94,14 +98,78 @@ const domBuileder = {
 
                     deletBtn.addEventListener("click", () => {
                         APIManager.deletePlace(interestURL, ID)
+                        let parent = card.parentNode
+                        parent.removeChild(card)
+
                     })
+                    //EDIT BUTTON and event listeners
+                    let editInput1 = document.createElement("input")
+                    let editInput2 = document.createElement("input")
+                    let editInput3 = document.createElement("input")
+                    let editInput4 = document.createElement("input")
+
+                    editInput1.className = "edit-input1"
+                    editInput2.className = "edit-input2"
+                    editInput3.className = "edit-input3"
+                    editInput4.className = "edit-input4"
+
+                    editInput1.placeholder = singleInterest.name;
+                    editInput2.placeholder = singleInterest.description;
+                    editInput3.placeholder = singleInterest.cost;
+                    editInput4.placeholder = singleInterest.review;
+
+                    let editInterest = document.createElement("button")
+                    editInterest.classList.add("edit-events")
+                    editInterest.classList.add("btn-outline-warning")
+                    editInterest.textContent = "Edit"
+                    editInterest.addEventListener("click", function (e) {
+
+                        //Hide the edit button to prevent reclicks
+                        this.style.display = "none"
+                        //Add Save and Cancel Buttons Inside  DIV for styling
+                        let editOptions = document.createElement("div")
+                        editOptions.className = "edit-options"
+                        let save = document.createElement("button")
+                        save.textContent = "Save"
+                        save.classList.add("btn-outline-info")
+                        save.addEventListener("click", function (e) {
+                            //console.log(editInput)
+                            let obj = {
+                                name: editInput1.value,
+                                description: editInput2.value,
+                                cost: editInput3.value,
+                                review: editInput4.value
+                            }
+                            console.log(obj)
+
+                            APIManager.editPatch(interestURL, ID, obj)
+                                .then(results => {
+                                    console.log(results)
+                                    eventsReset()
+                                })
+                        })
+                        editOptions.appendChild(save)
+                        let parent = editInterest.parentNode
+                        parent.appendChild(editInput1)
+                        parent.appendChild(editInput2)
+                        parent.appendChild(editInput3)
+                        parent.appendChild(editInput4)
+                        parent.appendChild(editOptions)
+                    })
+                    card.appendChild(editInterest)
+
+                    deletBtn.textContent = "REMOVE";
+                    editInterest.textContent = "EDIT"
+                    deletBtn.classList.add("btn-outline-success")
+                    card.appendChild(deletBtn)
+                    card.appendChild(editInterest)
                     outputForm.appendChild(card)
+                })
 
-                });
-            })
-
-    }
+            }
+            )}
 }
+
 
 
 export default domBuileder

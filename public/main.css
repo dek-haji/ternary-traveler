@@ -1,0 +1,133 @@
+#interest{
+    font-size: 15px;
+    line-height: 20px;
+    background-color:rgba(255,255,255, 0.7);
+    margin: 50px;
+    flex-basis: 33.3%;
+    text-align: center;
+    padding: 15px;
+    overflow: scroll;
+    flex-wrap: wrap;
+    border: 2px solid grey
+}
+body {
+    color: black
+}
+
+.home-div{
+    margin-top: 4em;
+    display: flex;
+    justify-content: space-evenly;
+}
+.credentials{
+    display: inherit;
+}
+/*
+#sign-in-email, #sign-in-password,
+#sign-up-email, #sign-up-password {
+    display: flex;
+    justify-content: space-around;
+}
+*/
+.bg-img{
+    /* Set up positioning */
+    margin-left: 8em;
+    height: 80%;
+    width: 80%;
+    position: sticky;
+}
+
+
+.logout{
+    padding: .4em;
+    margin-left: 20em;
+    display: flex;
+    align-self: flex-end;
+}
+
+.menu{
+    visibility: hidden;
+    width: 100%;
+}
+/*
+button{
+    width: 50px
+}*/
+
+.input {
+    background-color: rgb(92, 92, 92);
+    display: flex;
+    justify-content: center;
+}
+.input div{
+    padding: .4em;
+}
+
+.card{
+    padding: 1em;
+    width: 420px
+}
+.card button{
+    width: 20%;
+    margin: .5em;
+    text-align: center;
+
+
+}
+.card p{
+    margin-top: 1.5em;
+}
+
+.add--event--form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 200px
+}
+.add--news--form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 200px;
+    align-content: center;
+}
+.add--task--form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 200px;
+    align-content: center;
+}
+.save--message{
+    margin: 0 .4em;
+}
+.new--message--content{
+    width: 600px;
+}
+
+section{
+    font-size: 15px;
+    line-height: 20px;
+    background-color:rgba(255,255,255, 0.7);
+    margin: 50px;
+    flex-basis: 33.3%;
+    text-align: center;
+    padding: 15px;
+    overflow: scroll;
+    flex-wrap: wrap;
+}
+button{
+    border-radius: 30px
+}
+.save--message{
+    color: white;
+    background-color: blue
+}
+.event--save--button{
+    color: white;
+    background-color: blue
+}
+h1{
+    text-align: center
+}
+

@@ -18,12 +18,12 @@
   ],
   "interests": [
     {
-      "name": "dek",
-      "description": "i dont know",
-      "cost": "$123",
-      "review": "skljgfelrkg",
+      "name": "test",
+      "description": "test",
+      "cost": "test",
+      "review": "LOL",
       "placeId": 2,
-      "id": 3
+      "id": 1
     }
   ]
 }

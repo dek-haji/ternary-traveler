@@ -9,5 +9,5 @@ const placesURL = "http://0.0.0.0:8088/places"
 //     });
 //APIManager.getOnePlace(travelURL, 1)
 // APIManager.getAllPlaces(placesURL)
-domBuilder.createEventForm()
 domBuilder.createOutput()
+domBuilder.createEventForm()
