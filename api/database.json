@@ -14,32 +14,21 @@
       "id": 3,
       "name": "France",
       "visa_required": false
+    },
+    {
+      "id": 4,
+      "name": "Malaysia",
+      "visa_required": false
     }
   ],
   "interests": [
     {
-      "name": "fffff",
-      "description": "gggg",
-      "cost": "hhh",
-      "review": "hhhh",
-      "placeId": 1,
-      "id": 3
-    },
-    {
-      "name": "yuty",
-      "description": "tyut",
-      "cost": "uytu",
-      "review": "tuyu",
-      "placeId": 1,
-      "id": 4
-    },
-    {
-      "name": "iyui",
-      "description": "iyuii",
-      "cost": "iyui",
-      "review": "yuiy",
-      "placeId": 1,
-      "id": 5
+      "name": "hellow",
+      "description": "world",
+      "cost": "$123",
+      "review": "it was not that bad",
+      "placeId": 4,
+      "id": 1
     }
   ]
 }
